@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  @font-face {
+    font-family: CooperHewitt;
+    font-weight: 400;
+    src: url(../fonts/sans/CooperHewitt-Book.otf) format("opentype");
+  }
+  @font-face {
+    font-family: CooperHewitt;
+    font-weight: 500;
+    src: url(../fonts/sans/CooperHewitt-medium.otf) format("opentype");
+  }
+  @font-face {
+    font-family: lmroman;
+    font-weight: 500;
+    src: url(../fonts/serif/lmromandunh10-regular.otf) format("opentype");
+  }
+}
+
+
+@layer components {
+  .banana {
+    @apply inline-flex items-center
+  }
+}
+
+.banana { color: yellow}
