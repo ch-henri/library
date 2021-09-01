@@ -19,7 +19,22 @@
     font-weight: 500;
     src: url(../fonts/serif/lmromandunh10-regular.otf) format("opentype");
   }
+
+  @font-face {
+    font-family: lm-demi;
+    font-weight: 500;
+    src: url(../fonts/serif/lmromandemi10-regular.otf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: lm-caps;
+    font-weight: 500;
+    src: url(../fonts/serif/lmromancaps10-regular.otf) format("opentype");
+  }
 }
+
+
+
 
 
 @layer components {
