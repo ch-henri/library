@@ -589,7 +589,7 @@ video {
 }
 
 @font-face {
-  font-family: CooperHewitt;
+  font-family: 'CooperHewitt';
 
   font-weight: 400;
 
@@ -597,15 +597,15 @@ video {
 }
 
 @font-face {
-  font-family: CooperHewitt;
+  font-family: 'CooperHewitt';
 
   font-weight: 500;
 
-  src: url(../fonts/sans/CooperHewitt-medium.otf) format("opentype");
+  src: url(../fonts/sans/CooperHewitt-Medium.otf) format("opentype");
 }
 
 @font-face {
-  font-family: lmroman;
+  font-family: 'lmroman';
 
   font-weight: 500;
 
@@ -613,7 +613,7 @@ video {
 }
 
 @font-face {
-  font-family: lm-demi;
+  font-family: 'lm-demi';
 
   font-weight: 500;
 
@@ -621,7 +621,7 @@ video {
 }
 
 @font-face {
-  font-family: lm-caps;
+  font-family: 'lm-caps';
 
   font-weight: 500;
 
@@ -32251,8 +32251,34 @@ video {
   content: none;
 }
 
-.banana {
-  color: yellow
+.ornament-corner {
+  background-image: url(../img/ornament-corner.svg);
+  background-repeat: no-repeat;
+}
+
+.btn-ornaments:before,
+.btn-ornaments:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1em;
+  background-image: url(../img/ornament-line.svg);
+  background-repeat: no-repeat;
+}
+
+.btn-ornaments:after {
+  top: 0;
+  transform: rotate(180deg);
+}
+
+.btn-ornaments:before {
+  bottom: 0;
+}
+
+.geometric-precision {
+  text-rendering: geometricPrecision;
 }
 
 @media (min-width: 640px) {

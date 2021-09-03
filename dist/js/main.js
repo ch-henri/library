@@ -7,8 +7,14 @@ let books = [
   }
 ];
 
-let title = document.querySelector('#title');
 
-title.textContent = books[0].title;
+document.addEventListener('DOMContentLoaded', function(event) {
 
-// 
+  let bookList = document.querySelector('.js-book-list');
+  let template = document.querySelector('.js_book-card');
+
+  let newCard = template.content.cloneNode(true);
+  console.log({newCard});
+  
+  bookList.appendChild(newCard);
+})
