@@ -11,9 +11,15 @@
 
 <body class="">
   <header class="bg-gray-50 py-8 border border-b border-gray-200">
-    <div class="container mx-auto ">
-      <h1 class="font-display text-2xl text-center green-800">Book library</h1>
-    </div>
+    <div class="container mx-auto text-center">
+      <h1 class="font-display text-2xl green-800">Book library</h1>
+      <div class="mt-5">
+        <a class="btn-ornaments relative text-sm tracking-widest uppercase px-4 pb-3 pt-4" href="">Add book</a>
+      </div>
+
+
+
+        </div>
   </header>
   <main class="js-book-list container mx-auto mt-12">
 
@@ -22,15 +28,21 @@
       <div class="ornament-corner absolute inset-y-0 right-0 w-20 m-4"></div>
 
       <div class="flex justify-center">
-        <object class="h-5" type="image/svg+xml" data="img/ornament-index.svg"></object>
+        <svg class="h-5">
+          <use xlink:href="img/sprite.svg#ornament-index"></use> 
+        </svg>
       </div>
 
-      <div class="grid grid-cols-2 mt-4">
+      <div class="grid grid-cols-2 my-4">
         <div class="row-start-1 col-start-1 col-end-2 justify-self-start z-10">
           <div class="flex flex-col items-center">
-            <object class="w-16" type="image/svg+xml" data="img/book-read.svg"></object>
+            <svg class="w-16 h-16">
+              <use xlink:href="img/sprite.svg#book-read"></use> 
+            </svg>
             <div class="flex items-end mt-5">
-              <object class="w-5 mr-2" data="img/calendar.svg" type="image/svg+xml"></object>
+              <svg class="w-5 h-5 mr-2">
+                <use xlink:href="img/sprite.svg#calendar"></use> 
+              </svg>
               <div class="text-xs font-sans font-medium tracking-wider uppercase">Will read</div>
             </div>
           </div>
@@ -40,7 +52,9 @@
           <h2 class="js-title font-lm-demi text-2xl text-capitalize mb-1">The little book of calm</h2>
           <p class="js-author font-lm-caps text-xl lowercase mb-5">Paul Wilson</p>
           <div class="flex justify-center">
-            <object class="h-2.5" type="image/svg+xml" data="img/ornament-separator.svg"></object>
+            <svg class="h-2.5">
+              <use xlink:href="img/sprite.svg#ornament-separator"></use> 
+            </svg>
           </div>
         </div>
       </div>
