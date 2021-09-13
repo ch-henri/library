@@ -32251,6 +32251,57 @@ video {
   content: none;
 }
 
+.geometric-precision {
+  text-rendering: geometricPrecision;
+}
+
+.layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 1fr;
+}
+
+.frame-top, header, main, footer {
+  grid-column: 1 / 1;
+}
+
+header {
+  grid-row: 1 / 1;
+}
+
+.bg-texture {
+  background-image: url(../img/bg-texture.jpg);
+  background-repeat: repeat-y;
+  background-size: co ver;
+  background-position-y: top -10%;
+}
+
+.frame-top {
+  grid-row: 1 / 1;
+  background-image: url(../img/frame-top.svg);
+  background-repeat: no-repeat;
+  background-position-y: top;
+}
+
+main {
+  grid-row: 2 / 2;
+  background-image: url(../img/frame-border.svg);
+  background-repeat: repeat;
+  background-position-y: center;
+}
+
+footer {
+  grid-row: 3 / 3;
+  background-image: url(../img/frame-bottom.svg);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 100vw auto;
+}
+
+/*==================*/
+
 .ornament-corner {
   background-image: url(../img/ornament-corner.svg);
   background-repeat: no-repeat;
@@ -32275,10 +32326,6 @@ video {
 
 .btn-ornaments:before {
   bottom: 0;
-}
-
-.geometric-precision {
-  text-rendering: geometricPrecision;
 }
 
 @media (min-width: 640px) {
