@@ -25,7 +25,7 @@
     font-weight: 500;
     src: url(../fonts/serif/lmromandemi10-regular.otf) format("opentype");
   }
-  
+
   @font-face {
     font-family: 'lm-caps';
     font-weight: 500;
@@ -33,7 +33,7 @@
   }
 }
 
-@layer components {  
+@layer components {
   .banana {
     @apply inline-flex items-center
   }
@@ -45,79 +45,63 @@
 
 
 .layout {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  grid-template-rows: min-content 1fr min-content;
-  grid-template-columns: 1fr;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 5rem 1rem;
 }
-
-.frame-top, header, main, footer {
-  grid-column: 1 / 1;
-}
-
-header {
-  grid-row: 1 / 1;
-}
-
 
 .bg-texture {
   background-image: url(../img/bg-texture.jpg);
-  background-repeat: repeat-y;
-  background-size: co ver;
-  background-position-y: top -10%;
-}
-
-
-.frame-top {
-  grid-row: 1 / 1;
-  background-image: url(../img/frame-top.svg);
   background-repeat: no-repeat;
-  background-position-y: top;
-
+  background-size: 100% 100%;
 }
 
-main {
-  grid-row: 2 / 2;
+.content-frame {
+  flex: 1 1 auto;
   background-image: url(../img/frame-border.svg);
   background-repeat: repeat;
   background-position-y: center;
+  margin: 0 1px; /* fine tune alignement */
 }
 
 footer {
-  grid-row: 3 / 3;
-  background-image: url(../img/frame-bottom.svg);
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-  background-size: 100vw auto;
 }
-
-
 
 /*==================*/
 
 .ornament-corner {
+  width: 100%;
+  height: 100%;
   background-image: url(../img/ornament-corner.svg);
   background-repeat: no-repeat;
+}
+
+.btn-ornaments {
+  display: inline-block;
+  background-color: #F8F6F3;
 }
 
 .btn-ornaments:before,
 .btn-ornaments:after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 1em;
-  background-image: url(../img/ornament-line.svg);
-  background-repeat: no-repeat;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 1.5em;
+  background: url(../img/ornament-line.svg) no-repeat;
 }
 
 .btn-ornaments:after {
-  top: 0;
-  transform: rotate(180deg);
+  right: 0;
+  transform: rotate(180deg)  translateX(-50%);
 }
 
 
 .btn-ornaments:before {
-  bottom: 0;
+  left: 0;
+  transform: translateX(50%);
 }

@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   let newCard = template.content.cloneNode(true);
   console.log({newCard});
+
   
   bookList.appendChild(newCard);
 })
