@@ -39,6 +39,11 @@
   }
 }
 
+:root {
+  --primary: #755617;
+}
+
+
 .geometric-precision {
   text-rendering: geometricPrecision;
 }
@@ -79,9 +84,17 @@ footer {
   background-repeat: no-repeat;
 }
 
+
+
 .btn-ornaments {
+  position: relative;
   display: inline-block;
-  background-color: #F8F6F3;
+  @apply text-brown;
+  @apply bg-brown-lighter;
+}
+
+.btn-ornaments:hover {
+  @apply bg-brown-light;
 }
 
 .btn-ornaments:before,
@@ -91,17 +104,48 @@ footer {
   top: 0;
   bottom: 0;
   height: 100%;
-  width: 1.5em;
-  background: url(../img/ornament-line.svg) no-repeat;
+  width: 1.5rem;
+  @apply bg-brown bg-opacity-90;
+  -webkit-mask-image:url(../img/ornament-line.svg);
+  mask-image:url(../img/ornament-line.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 
 .btn-ornaments:after {
   right: 0;
-  transform: rotate(180deg)  translateX(-50%);
+  transform: rotate(180deg);
 }
 
 
 .btn-ornaments:before {
   left: 0;
-  transform: translateX(50%);
+}
+
+
+.btn-ornaments:hover:before,
+.btn-ornaments:hover:after {
+  @apply bg-brown;
+}
+
+.btn-ornaments-lg {
+  position: relative;
+  text-decoration: underline;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.btn-ornaments-lg:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  @apply bg-brown bg-opacity-90;
+  -webkit-mask-image:url(../img/ornament-line.svg);
+  mask-image:url(../img/ornament-line.svg);
+  mask-repeat: no-repeat;
+  mask-position: center bottom;
+  width: 100%;
+
+  transform: rotate(90deg);
 }

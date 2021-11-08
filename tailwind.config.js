@@ -26,6 +26,13 @@ module.exports = {
       'lm-demi': ['lm-demi', 'serif'],
       'lm-caps': ['lm-caps', 'serif'],
     },
+    colors: {
+      brown: {
+        lighter: '#EAE6DC',
+        light: '#D0C6B1',
+        DEFAULT: '#755617'
+      },
+    },
     extend: {
     },
   },
