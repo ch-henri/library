@@ -163,3 +163,16 @@ footer {
 
   transform: rotate(90deg);
 }
+
+/*----------------------------*/
+
+.form-newbook label:not(.radio-label),
+.form-newbook legend {
+  font-weight: 500;
+}
+
+.form-newbook input {
+  font-size: 1.125rem;
+  padding: .5rem;
+
+}

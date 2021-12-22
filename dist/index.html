@@ -19,11 +19,59 @@
           <span class="block text-4xl ">My personal library</span>
         </h1>
         <div class="my-4">
-          <a class="btn-lg relative text-lg font-medium leading-none tracking-widest uppercase px-8 py-5" href="">Add book</a>
+          <button type="button" id="btnShowForm" class="btn-lg relative text-lg font-medium leading-none tracking-widest uppercase px-8 py-5" href="">Add book</button>
         </div>
       </div>
     </header>
     <main class="mx-5 sm:mx-8 lg:mx-0">
+      <div id="formAddBook" class="hidden border-4 border-gray-800 py-12 px-12">
+        <h2 class="text-4xl mb-6">formAddBook</h2>
+        <form action="" id="formNewBook" class="form-newbook grid grid-cols-2 gap-x-4 gap-y-8">
+
+          <div class="flex flex-col gap-2">
+            <label for="title">Book Name</label>
+            <input id="inputTitle" name="title" type="text" value="Le capital">
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="author">Author</label>
+            <input id="inputAuthor" name="author" type="text" value="Karl M.">
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="pages">Number of pages</label>
+            <input id="inputPages" type="number" name="pages" value="12">
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="publisher">Publisher</label>
+            <input id="inputPublisher" type="text" name="publisher" value="mhmhmhhhmmh">
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="released">Date of release</label>
+            <input id="inputReleased" type="date" name="released">
+          </div>
+
+          <fieldset id="">
+            <legend class="block mb-2">Have you read read it ?</legend>
+           <div class="flex flex-wrap my-2">
+            <div class="w-1/2 px-2">
+              <input id="read" type="radio" name="read" value="true">
+              <label class="radio-label" for="read">Yes i did</label>
+            </div>
+            <div class="w-1/2 px-2">
+              <input id="notRead" type="radio" name="read" value="false">
+              <label class="radio-label" for="notRead">Not yet</label>
+            </div>
+           </div>
+          </fieldset>
+
+
+          <button type="submit" class="btn relative text-sm tracking-widest leading-none uppercase px-0.5 pt-2 pb-1.5 mb-5">Ajouter</button>
+
+        </form>
+      </div>
       <div class="js-book-list container mx-auto mt-12">
         <template class="js_book-card ">
           <div class="relative bg-white shadow rounded max-w-3xl mx-auto">
@@ -37,8 +85,8 @@
                 <svg class="h-6 w-full mb-6 mx-auto">
                   <use xlink:href="img/sprite.svg#ornament-index"></use>
                 </svg>
-                <h2 class="js-title font-lm-demi text-2xl text-capitalize mb-1 mt-3">The little book of calm</h2>
-                <p class="js-author font-lm-caps text-xl lowercase mb-5">Paul Wilson</p>
+                <h2 id="title" class="font-lm-demi text-2xl text-capitalize mb-1 mt-3">The little book of calm</h2>
+                <p id="author" class="font-lm-caps text-xl lowercase mb-5">Paul Wilson</p>
                 <svg class="h-2.5 w-full mx-auto">
                   <use xlink:href="img/sprite.svg#ornament-separator"></use>
                 </svg>
@@ -63,15 +111,15 @@
               <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-3 text-center lg:text-left">
                 <div class="">
                   <div class="font-lm-caps text-sm lowercase subpixel-antialiased geometric-precision ">Edition</div>
-                  <div class="font-lm-demi text-lg">Penguin Group</div>
+                  <div id="publisher" class="font-lm-demi text-lg">Penguin Group</div>
                 </div>
                 <div class="">
                   <div class="font-lm-caps text-sm lowercase subpixel-antialiased geometric-precision ">Number of page</div>
-                  <div class="font-lm-demi text-lg">60 p.</div>
+                  <div id="pages" class="font-lm-demi text-lg">60 p.</div>
                 </div>
                 <div class="">
                   <div class="font-lm-caps text-sm lowercase subpixel-antialiased geometric-precision ">Published</div>
-                  <div class="font-lm-demi text-lg">3 aout 2020</div>
+                  <div id="released" class="font-lm-demi text-lg">3 aout 2020</div>
                 </div>
                 <div class="text-center">
                   <a class="btn relative text-sm tracking-widest leading-none uppercase px-0.5 pt-2 pb-1.5 mb-5" href="">Update</a>
